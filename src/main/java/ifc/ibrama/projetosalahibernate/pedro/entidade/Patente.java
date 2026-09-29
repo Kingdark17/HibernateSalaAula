@@ -5,19 +5,23 @@
 package ifc.ibrama.projetosalahibernate.pedro.entidade;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.util.Objects;
 
 /**
  *
  * @author aluno
  */
+@Entity
+@Table(name = "Patente")
 public class Patente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "pat_id")
     private Integer id;
 
