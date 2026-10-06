@@ -24,5 +24,12 @@
         <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.Bombeiros"/>
         <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.Viatura"/>
         <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.Patente"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.AutoEscada"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.AutoTanque"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.Epecialidade"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.StatusBombeiro"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.StatusViatura"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.TelefoneContato"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.UnidadeResgate"/>
     </session-factory>
 </hibernate-configuration>
