@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
 
@@ -19,6 +21,8 @@ import java.time.LocalDate;
 @Entity
 @Table(name="Usuario")
 public class Usuario {
+    @OneToOne
+    @JoinColumn(name="bom_id", unique = true)
     private Bombeiro bombeiro;
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
