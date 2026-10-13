@@ -24,9 +24,9 @@ public class Usuario {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="usu_id")
     private Integer id;
-    @Column(name="usu_login", length=11, unique=true , nullable=false)
+    @Column(name="usu_login", length=40, unique=true , nullable=false)
     private String login;
-    @Column(name="usu_senha", nullable=false)
+    @Column(name="usu_senha", length=40, nullable=false, unique=true)
     private LocalDate senha;
 
     public Usuario(Bombeiro bombeiro) {
