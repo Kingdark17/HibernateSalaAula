@@ -31,5 +31,6 @@
         <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.StatusViatura"/>
         <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.TelefoneContato"/>
         <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.UnidadeResgate"/>
+        <mapping clas = "ifc.ibrama.projetosalahibernate.pedro.entidades.Usuario"/>
     </session-factory>
 </hibernate-configuration>

@@ -29,8 +29,11 @@ public class Usuario {
     @Column(name="usu_senha", nullable=false)
     private LocalDate senha;
 
-    public Usuario() {
+    public Usuario(Bombeiro bombeiro) {
+        this.bombeiro = bombeiro;
     }
+
+
     @Override
             
     public int hashCode(){

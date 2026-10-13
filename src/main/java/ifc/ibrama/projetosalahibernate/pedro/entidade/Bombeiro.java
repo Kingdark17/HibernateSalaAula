@@ -19,6 +19,13 @@ import java.time.LocalDate;
 @Entity
 @Table(name="Bombeiro")
 public class Bombeiro {
+    private Usuario ususario;
+
+    public Bombeiro(Usuario ususario) {
+        this.ususario = ususario;
+    }
+
+    
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="bom_id")
