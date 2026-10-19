@@ -46,7 +46,9 @@ public class Bombeiro {
     private Usuario ususario;
     @OneToMany(mappedBy ="bombeiro")
     private Set<TelefoneContato> telefone = new HashSet<TelefoneContato>();
-   
+    private Set<Patente> patente = new HashSet<TelefoneContato>();
+    
+    
     public Bombeiro() {
     }
 
