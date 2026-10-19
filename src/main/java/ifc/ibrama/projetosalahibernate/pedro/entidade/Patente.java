@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import java.util.Objects;
 
@@ -31,6 +33,10 @@ public class Patente {
     @Column(name = "pat_descricao", length = 45, nullable = false)
     private String descricao;
 
+    @ManyToMany
+    @JoinColumn(name="bom_id", unique =false)
+    private Patente patente;
+    
     public Patente() {
     }
 
