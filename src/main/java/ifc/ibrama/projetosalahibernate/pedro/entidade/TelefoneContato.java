@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ifc.ibirama.br3n0.mpbb0128.hibernate.entidadades;
+package ifc.ibrama.projetosalahibernate.pedro.entidade;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
