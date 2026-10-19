@@ -9,6 +9,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -46,8 +49,10 @@ public class Bombeiro {
     private Usuario ususario;
     @OneToMany(mappedBy ="bombeiro")
     private Set<TelefoneContato> telefone = new HashSet<TelefoneContato>();
-    private Set<Patente> patente = new HashSet<TelefoneContato>();
-    
+    @ManyToMany 
+    @JoinTable(name = "bombeiro_has_Patente" ,joinColumns = @JoinColumn(name = "bom_id") ,inverseJoinColumns = @JoinColumn(name = "pat_id"))
+    private Set<Patente> patente = new HashSet<Patente>();
+   
     
     public Bombeiro() {
     }
