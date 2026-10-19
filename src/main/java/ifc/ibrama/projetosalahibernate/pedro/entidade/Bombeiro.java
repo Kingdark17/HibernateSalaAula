@@ -12,6 +12,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -22,7 +24,7 @@ import java.time.LocalDate;
 public class Bombeiro {
     @OneToOne(mappedBy ="bombeiro")
     private Usuario ususario;
-
+    private Set<TelefoneContato> telefone = new HashSet<TelefoneContato>();
     public Bombeiro(Usuario ususario) {
         this.ususario = ususario;
     }
