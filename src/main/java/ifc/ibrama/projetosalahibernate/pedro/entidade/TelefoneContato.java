@@ -31,7 +31,7 @@ public class TelefoneContato {
     private String tipo;
     
     @ManyToOne
-    @JoinColumn(name="bom_id", unique = true)
+    @JoinColumn(name="bom_id", unique =false)
     private TelefoneContato telefoneContato;
     
     
