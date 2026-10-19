@@ -35,6 +35,7 @@ public class Patente {
     @Column(name = "pat_descricao", length = 45, nullable = false)
     private String descricao;
 
+    @ManyToMany(mappedBy ="patente")
     private Set<Bombeiro> bombeiro = new HashSet<Bombeiro>();
  
     public Patente() {
