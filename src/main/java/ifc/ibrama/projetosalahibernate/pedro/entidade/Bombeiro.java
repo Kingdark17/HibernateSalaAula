@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import java.time.LocalDate;
@@ -22,9 +23,7 @@ import java.util.Set;
 @Entity
 @Table(name="Bombeiro")
 public class Bombeiro {
-    @OneToOne(mappedBy ="bombeiro")
-    private Usuario ususario;
-    private Set<TelefoneContato> telefone = new HashSet<TelefoneContato>();
+
     public Bombeiro(Usuario ususario) {
         this.ususario = ususario;
     }
@@ -42,7 +41,12 @@ public class Bombeiro {
     private String Nome;
     @Column(name="bom_nome_guerra", length=45, unique=true , nullable=false)
     private String Nome_Guerra;
-
+    
+    @OneToOne(mappedBy ="bombeiro")
+    private Usuario ususario;
+    @OneToMany(mappedBy ="bombeiro")
+    private Set<TelefoneContato> telefone = new HashSet<TelefoneContato>();
+   
     public Bombeiro() {
     }
 
