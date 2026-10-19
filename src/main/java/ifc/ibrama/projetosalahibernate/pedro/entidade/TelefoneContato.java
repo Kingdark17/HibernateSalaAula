@@ -28,6 +28,9 @@ public class TelefoneContato {
     @Column(name = "tec_tipo", length = 5, nullable = false)
     private String tipo;
 
+    private TelefoneContato telefoneContato;
+    
+    
     public TelefoneContato() {
     }
 
