@@ -12,7 +12,9 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  *
@@ -33,10 +35,8 @@ public class Patente {
     @Column(name = "pat_descricao", length = 45, nullable = false)
     private String descricao;
 
-    @ManyToMany
-    @JoinColumn(name="bom_id", unique =false)
-    private Patente patente;
-    
+ private Set<Bombeiro> bombeiro = new HashSet<Bombeiro>();
+ 
     public Patente() {
     }
 
