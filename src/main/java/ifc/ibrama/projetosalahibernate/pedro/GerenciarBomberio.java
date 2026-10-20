@@ -21,10 +21,10 @@ public class GerenciarBomberio {
         Session session = HibernateUtil.getSessionFactory().openSession();
         
         Bombeiro bombeiro01 = new Bombeiro();
-        bombeiro01.setCPF("123456789");
+        bombeiro01.setCpf("123456789");
         bombeiro01.setNome("Fulano");
         bombeiro01.setNome_Guerra("Silva");
-        bombeiro01.setData_Nacimento(LocalDate(2000, Month.MARCH, 14));
+        bombeiro01.setData_Nacimento(LocalDate.of(2000, Month.MARCH, 14));
 
 
         
