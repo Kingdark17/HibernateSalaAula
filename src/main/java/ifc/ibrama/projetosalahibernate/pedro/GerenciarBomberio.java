@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import java.time.Month;
 
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -26,7 +27,7 @@ public class GerenciarBomberio {
         bombeiro01.setNome_Guerra("Silva");
         bombeiro01.setData_Nacimento(LocalDate.of(2000, Month.MARCH, 14));
 
-
+        Transaction transacao = null;
         
         System.out.println("Conexao esabelecida com sucesso!");
         HibernateUtil.shutdow();
