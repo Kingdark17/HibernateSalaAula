@@ -4,7 +4,12 @@
  */
 package ifc.ibrama.projetosalahibernate.pedro;
 
+import ifc.ibrama.projetosalahibernate.pedro.entidade.Bombeiro;
 import ifc.ibrama.projetosalahibernate.pedro.util.HibernateUtil;
+
+import java.time.LocalDate;
+import java.time.Month;
+
 import org.hibernate.Session;
 
 /**
@@ -15,7 +20,16 @@ public class GerenciarBomberio {
     public static void main(String[] args) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         
+        Bombeiro bombeiro01 = new Bombeiro();
+        bombeiro01.setCPF("123456789");
+        bombeiro01.setNome("Fulano");
+        bombeiro01.setNome_Guerra("Silva");
+        bombeiro01.setData_Nacimento(LocalDate(2000, Month.MARCH, 14));
+
+
+        
         System.out.println("Conexao esabelecida com sucesso!");
+        HibernateUtil.shutdow();
         session.close();
     }
 }
